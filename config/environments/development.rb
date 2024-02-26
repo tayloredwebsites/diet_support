@@ -76,7 +76,7 @@ Rails.application.configure do
   # Note: fix for ArgumentError in Devise::Confirmations#create
   #   Missing host to link to! Please provide the :host parameter,
   #     set default_url_options[:host], or set :only_path to true
-  Rails.application.routes.default_url_options[:host] = ENV['HOST']
+  Rails.application.routes.default_url_options[:host] = ENV['HOST'] || 'localhost:3000'
 
   # # To adjust logger level, create a new logger
   config.logger = ActiveSupport::Logger.new(STDOUT)
